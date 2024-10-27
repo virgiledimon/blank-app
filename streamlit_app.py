@@ -1,5 +1,4 @@
 import streamlit as st
-!sudo apt update
 
 st.title("🎈 FogCID-XAI")
 st.write(
