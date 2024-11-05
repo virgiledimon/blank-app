@@ -19,3 +19,4 @@ with st.form("input_params_form", clear_on_submit=False, enter_to_submit=True, b
         st.write("episode_nbr", episode_nbr)
 
 st.write("Dernières séquences de détection")
+
