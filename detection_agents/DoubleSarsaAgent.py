@@ -4,7 +4,7 @@ import gymnasium as gym
 import matplotlib.pyplot as plt
 import gym_fc_impersonation_detection
 
-class DoubleSarsaSimulation:
+class DoubleSarsaAgent:
 
     ################################################################################################
     def __init__(self, db_agent, r1=4, r2=2, l1=6, l2=9, mu=0.9, gamma=0.6, epsilon=0.5, n=3, xi_squared=5, m=0.2, omega=20, f0=2.4, T=20, N=30, area_size=50, nbr_legitimate_users=10, nbr_not_legitimate_users=5, nbr_receivers=5) :

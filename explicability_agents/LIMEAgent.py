@@ -1,4 +1,3 @@
-!pip install lime
 import matplotlib.pyplot as plt
 from lime.lime_tabular import LimeTabularExplainer
 from sklearn.preprocessing import StandardScaler

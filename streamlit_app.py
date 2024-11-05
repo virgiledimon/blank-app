@@ -2,9 +2,9 @@ import streamlit as st
 import pandas as pd
 import time
 from detection_agents.DoubleSarsaAgent import DoubleSarsaAgent  # à ajuster selon l'emplacement des agents
-from explicitility_agents.SHAPAgent import SHAPAgent
-from explicitility_agents.LIMEAgent import LIMEAgent
-from explicitility_agents.PFIAgent import PFIAgent
+from explicability_agents.SHAPAgent import SHAPAgent
+from explicability_agents.LIMEAgent import LIMEAgent
+from explicability_agents.PFIAgent import PFIAgent
 from interpretability_agents.InterpretabilityAgent import InterpretabilityAgent
 
 st.title("FogCID-XAI")

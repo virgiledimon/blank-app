@@ -1,4 +1,3 @@
-! pip install shap
 import shap
 import pandas as pd
 from sklearn.preprocessing import StandardScaler

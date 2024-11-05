@@ -1,12 +1,12 @@
 streamlit
 psycopg2
-logging
+scipy
+#logging
 psycopg2
 numpy
 gymnasium
-scipy
 matplotlib
-sklearn
+scikit-learn
 shap
 panda
 lime

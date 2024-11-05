@@ -1,6 +1,6 @@
 from sklearn.inspection import permutation_importance
 
-class PFI_Agent:
+class PFIAgent:
     def __init__(self, model, db_agent):
         self.model = model
         self.db_agent = db_agent
