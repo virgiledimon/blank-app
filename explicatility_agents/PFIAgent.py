@@ -49,19 +49,19 @@ class PFI_Agent:
         plt.show()
 
 # Exemple d'utilisation
-if __name__ == "__main__":
-    # Supposons que db_agent est déjà initialisé et connecté à la base de données
-    db_agent = PostgreSQLAgent(db_name='', user='postgres', password='postgres')
+# if __name__ == "__main__":
+#     # Supposons que db_agent est déjà initialisé et connecté à la base de données
+#     db_agent = PostgreSQLAgent(db_name='', user='postgres', password='postgres')
 
-    # Créer l'agent PFI en utilisant le modèle déjà entraîné
-    pfi_agent = PFI_Agent(model=interpret_agent.model_decision, db_agent=db_agent)
+#     # Créer l'agent PFI en utilisant le modèle déjà entraîné
+#     pfi_agent = PFI_Agent(model=interpret_agent.model_decision, db_agent=db_agent)
 
-    # Récupérer et normaliser les données de décisions depuis la base
-    pfi_agent.get_normalized_decision_data()
+#     # Récupérer et normaliser les données de décisions depuis la base
+#     pfi_agent.get_normalized_decision_data()
 
-    # Calculer les importances des caractéristiques
-    importances = pfi_agent.compute_importance()
-    print("Importances des caractéristiques:", importances)
+#     # Calculer les importances des caractéristiques
+#     importances = pfi_agent.compute_importance()
+#     print("Importances des caractéristiques:", importances)
 
-    # Afficher le graphique des importances
-    pfi_agent.plot_importance(importances)
+#     # Afficher le graphique des importances
+#     pfi_agent.plot_importance(importances)

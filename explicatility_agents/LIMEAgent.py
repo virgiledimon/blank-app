@@ -57,18 +57,18 @@ class LIMEAgent:
         print("\n")
 
 # Exemple d'utilisation
-if __name__ == "__main__":
-    # Supposons que db_agent est déjà initialisé et connecté à la base de données
-    db_agent = PostgreSQLAgent(db_name='', user='postgres', password='postgres')
+# if __name__ == "__main__":
+#     # Supposons que db_agent est déjà initialisé et connecté à la base de données
+#     db_agent = PostgreSQLAgent(db_name='', user='postgres', password='postgres')
 
-    # Créer l'agent LIME en utilisant le modèle déjà entraîné et la base de données
-    lime_agent = LIMEAgent(model=interpret_agent.model_decision, db_agent=db_agent)
+#     # Créer l'agent LIME en utilisant le modèle déjà entraîné et la base de données
+#     lime_agent = LIMEAgent(model=interpret_agent.model_decision, db_agent=db_agent)
 
-    # Récupérer et normaliser les données de décisions depuis la base
-    lime_agent.get_normalized_decision_data()
+#     # Récupérer et normaliser les données de décisions depuis la base
+#     lime_agent.get_normalized_decision_data()
 
-    # Exemple de nouvelle donnée à expliquer (doit être normalisée avant utilisation)
-    X_instance_normalized = lime_agent.X_test[0]  # Utiliser la première instance des données normalisées
-    print(X_instance_normalized)
-    # Expliquer l'instance
-    lime_agent.explain_instance(X_instance_normalized)
+#     # Exemple de nouvelle donnée à expliquer (doit être normalisée avant utilisation)
+#     X_instance_normalized = lime_agent.X_test[0]  # Utiliser la première instance des données normalisées
+#     print(X_instance_normalized)
+#     # Expliquer l'instance
+#     lime_agent.explain_instance(X_instance_normalized)

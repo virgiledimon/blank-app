@@ -198,7 +198,7 @@ class DoubleSarsaSimulation:
 
     ################################################################################################
 
-# Instancier et exécuter la simulation
-db_agent = PostgreSQLAgent(db_name='', user='postgres', password='postgres')
-simulation = DoubleSarsaSimulation(db_agent=db_agent)
-simulation.run()
+# # Instancier et exécuter la simulation
+# db_agent = PostgreSQLAgent(db_name='', user='postgres', password='postgres')
+# simulation = DoubleSarsaSimulation(db_agent=db_agent)
+# simulation.run()

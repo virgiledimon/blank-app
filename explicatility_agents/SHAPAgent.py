@@ -86,18 +86,18 @@ class SHAPAgent:
 
 
 # Exemple d'utilisation
-if __name__ == "__main__":
-    # Supposons que db_agent est déjà initialisé et connecté à la base de données
-    db_agent = PostgreSQLAgent(db_name='', user='postgres', password='postgres')
+# if __name__ == "__main__":
+#     # Supposons que db_agent est déjà initialisé et connecté à la base de données
+#     db_agent = PostgreSQLAgent(db_name='', user='postgres', password='postgres')
 
-    # Créer l'agent SHAP en utilisant le modèle déjà entraîné
-    shap_agent = SHAPAgent(model=interpret_agent.model_decision, db_agent=db_agent)
+#     # Créer l'agent SHAP en utilisant le modèle déjà entraîné
+#     shap_agent = SHAPAgent(model=interpret_agent.model_decision, db_agent=db_agent)
 
-    # Récupérer et normaliser les données de décisions depuis la base
-    shap_agent.get_normalized_decision_data()
+#     # Récupérer et normaliser les données de décisions depuis la base
+#     shap_agent.get_normalized_decision_data()
 
-    # Expliquer le modèle entier
-    shap_agent.explain_model()
+#     # Expliquer le modèle entier
+#     shap_agent.explain_model()
 
-    # Instance
-    shap_agent.explain_instance()
+#     # Instance
+#     shap_agent.explain_instance()
