@@ -5,6 +5,7 @@ from detection_agents.DoubleSarsaAgent import DoubleSarsaAgent  # à ajuster sel
 from explicability_agents.SHAPAgent import SHAPAgent
 from explicability_agents.LIMEAgent import LIMEAgent
 from explicability_agents.PFIAgent import PFIAgent
+from data.PostgreSQLAgent import PostgreSQLAgent
 from interpretability_agents.InterpretabilityAgent import InterpretabilityAgent
 
 st.title("FogCID-XAI")
@@ -18,8 +19,10 @@ with st.form("input_params_form", clear_on_submit=False):
     episode_nbr = st.number_input("Nombre d'épisodes", min_value=30)
     submitted = st.form_submit_button("Simuler")
 
-# Initialisation des agents
-detection_agent = DoubleSarsaAgent() if algo == "Double SARSA" else None
+db_agent = PostgreSQLAgent(db_name='virgvakl_fogcid_xai', user='virgvakl_fogcid_xai_user', password='naThisIsFogProject2024', port='5522')
+
+# Initialisation des agents 
+detection_agent = DoubleSarsaAgent(db_agent=db_agent) if algo == "Double SARSA" else None
 xai_agent = {
     "SHAP": SHAPAgent(),
     "LIME": LIMEAgent(),
