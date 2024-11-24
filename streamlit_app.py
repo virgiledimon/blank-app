@@ -23,15 +23,18 @@ db_agent = PostgreSQLAgent(db_name='virgvakl_fogcid_xai', user='virgvakl_fogcid_
 
 # Initialisation des agents 
 detection_agent = DoubleSarsaAgent(db_agent=db_agent) if algo == "Double SARSA" else None
+
 xai_agent = {
     "SHAP": SHAPAgent(),
     "LIME": LIMEAgent(),
     "Permutation Feature Importance": PFIAgent()
 }.get(xai_methode, None)
-interpretability_agent = InterpretabilityAgent()
 
+interpretability_agent = InterpretabilityAgent()
+print("yes1")
 # Lorsque le formulaire est soumis
 if submitted:
+    print("yes")
     # Exécution de l'agent de détection et collecte des données
     detection_agent.run_simulation(episode_nbr)  # Lancement de la simulation
     st.write(f"Lancement de la simulation pour {episode_nbr} épisodes")
